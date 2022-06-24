@@ -1,11 +1,15 @@
-%define snapshot 20200825
-%define commit a445f089cbecdc257a3ec67ddcbeb88acdb83349
+#define snapshot 20200825
+#define commit a445f089cbecdc257a3ec67ddcbeb88acdb83349
 
 Name:		kirigami-addons
-Version:	0.0
+Version:	0.3
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Add-on widgets for the Kirigami library
+%if 0%{?snapshot:1}
 Source0:	https://invent.kde.org/sredman/kirigami-addons/-/archive/master/kirigami-addons-master.tar.bz2
+%else
+Source0:	https://download.kde.org/unstable/kirigami-addons/%{version}/kirigami-addons-%{version}.tar.xz
+%endif
 License:	LGPLv2+
 Group:		Applications/Productivity
 BuildRequires:	cmake
@@ -25,7 +29,7 @@ BuildRequires:	cmake(KF5I18n)
 Add-on widgets for the Kirigami library
 
 %prep
-%autosetup -p1 -n %{name}-master
+%autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:%{version}}
 %cmake_kde5 -G Ninja
 
 %build
@@ -33,6 +37,8 @@ Add-on widgets for the Kirigami library
 
 %install
 %ninja_install -C build
+%find_lang %{name}
 
-%files
+%files -f %{name}.lang
 %{_libdir}/qt5/qml/org/kde/kirigamiaddons
+%{_libdir}/cmake/KF5KirigamiAddons
