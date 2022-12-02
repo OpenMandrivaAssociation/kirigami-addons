@@ -2,13 +2,13 @@
 #define commit a445f089cbecdc257a3ec67ddcbeb88acdb83349
 
 Name:		kirigami-addons
-Version:	0.3
+Version:	0.6
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?snapshot:1}
 Source0:	https://invent.kde.org/sredman/kirigami-addons/-/archive/master/kirigami-addons-master.tar.bz2
 %else
-Source0:	https://download.kde.org/unstable/kirigami-addons/%{version}/kirigami-addons-%{version}.tar.xz
+Source0:	https://download.kde.org/stable/kirigami-addons/kirigami-addons-%{version}.tar.xz
 %endif
 License:	LGPLv2+
 Group:		Applications/Productivity
