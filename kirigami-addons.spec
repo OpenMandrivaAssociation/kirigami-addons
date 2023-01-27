@@ -2,7 +2,7 @@
 #define commit a445f089cbecdc257a3ec67ddcbeb88acdb83349
 
 Name:		kirigami-addons
-Version:	0.6
+Version:	0.6.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?snapshot:1}
@@ -26,7 +26,17 @@ BuildRequires:	cmake(KF5Kirigami2)
 BuildRequires:	cmake(KF5I18n)
 
 %description
-Add-on widgets for the Kirigami library
+Add-on widgets for the Kirigami library.
+
+%package devel
+Summary:	Development files for %{name}
+Group:		Development/KDE and Qt
+Requires:	%{name} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
+
+%description devel
+This package contains header files needed if you wish to build
+applications based on %{name}.
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:%{version}}
@@ -41,4 +51,6 @@ Add-on widgets for the Kirigami library
 
 %files -f %{name}.lang
 %{_libdir}/qt5/qml/org/kde/kirigamiaddons
+
+%files devel
 %{_libdir}/cmake/KF5KirigamiAddons
