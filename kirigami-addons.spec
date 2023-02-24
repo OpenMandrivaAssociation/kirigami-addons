@@ -2,7 +2,7 @@
 #define commit a445f089cbecdc257a3ec67ddcbeb88acdb83349
 
 Name:		kirigami-addons
-Version:	0.6.2
+Version:	0.7.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?snapshot:1}
