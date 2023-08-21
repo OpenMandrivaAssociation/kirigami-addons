@@ -1,14 +1,14 @@
-#define git 20230812
+#define git 20230821
 
 %bcond_without kde5
 %bcond_without kde6
 
 Name:		kirigami-addons
-Version:	0.10.0
-Release:	%{?git:0.%{git}.}2
+Version:	0.11.0
+Release:	%{?git:0.%{git}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
-Source0:	https://invent.kde.org/sredman/kirigami-addons/-/archive/master/kirigami-addons-master.tar.bz2
+Source0:	https://invent.kde.org/libraries/kirigami-addons/-/archive/master/kirigami-addons-master.tar.bz2
 %else
 Source0:	https://download.kde.org/stable/kirigami-addons/kirigami-addons-%{version}.tar.xz
 %endif
