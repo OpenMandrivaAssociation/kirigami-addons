@@ -4,7 +4,7 @@
 %bcond_without kde6
 
 Name:		kirigami-addons
-Version:	0.11.76
+Version:	0.11.90
 Release:	%{?git:0.%{git}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
@@ -67,12 +67,12 @@ Translations for kirigami-addons
 %install
 %ninja_install -C build
 
-%find_lang %{name}
+%find_lang %{name}6
 
 %files
 %{_qtdir}/qml/org/kde/kirigamiaddons
 
-%files translations -f %{name}.lang
+%files translations -f %{name}6.lang
 
 %files devel
 %{_libdir}/cmake/KF6KirigamiAddons
