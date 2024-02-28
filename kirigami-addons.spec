@@ -1,10 +1,8 @@
 %define stable %(if [ "$(echo %{version} |cut -d. -f3)" -gt 50 ]; then echo -n "un"; fi; echo stable)
 #define git 20230821
 
-%bcond_without kde6
-
 Name:		kirigami-addons
-Version:	0.11.90
+Version:	1.0.1
 Release:	%{?git:0.%{git}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
