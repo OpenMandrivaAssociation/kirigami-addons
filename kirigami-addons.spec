@@ -26,6 +26,7 @@ BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6QuickControls2)
 BuildRequires:	cmake(KF6Kirigami2)
 BuildRequires:	cmake(KF6I18n)
+BuildRequires:	cmake(KF6Config)
 Suggests:	%{name}-translations = %{EVRD}
 %rename %{name}-kde6
 %rename kf6-kirigami-addons
