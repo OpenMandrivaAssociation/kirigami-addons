@@ -2,7 +2,7 @@
 #define git 20230821
 
 Name:		kirigami-addons
-Version:	1.4.0
+Version:	1.5.0
 Release:	%{?git:0.%{git}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
@@ -81,4 +81,4 @@ Translations for kirigami-addons
 %{_libdir}/cmake/KF6KirigamiAddons
 %{_includedir}/KirigamiAddonsStatefulApp
 %{_libdir}/libKirigamiAddonsStatefulApp.so
-%{_datadir}/kdevappwizard/templates/kirigamiaddons6.tar.bz2
+%{_datadir}/kdevappwizard/templates/*
