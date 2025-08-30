@@ -2,7 +2,7 @@
 #define git 20230821
 
 Name:		kirigami-addons
-Version:	1.7.0
+Version:	1.9.0
 Release:	%{?git:0.%{git}.}1
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
