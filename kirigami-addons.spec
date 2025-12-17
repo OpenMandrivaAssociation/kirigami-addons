@@ -30,6 +30,7 @@ BuildRequires:	cmake(KF6Config)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6GuiAddons)
 BuildRequires:	cmake(KF6GlobalAccel)
+BuildRequires:	cmake(KF6ColorScheme)
 Suggests:	%{name}-translations = %{EVRD}
 %rename %{name}-kde6
 %rename kf6-kirigami-addons
