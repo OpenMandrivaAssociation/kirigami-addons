@@ -21,6 +21,7 @@ BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6Network)
 BuildRequires:	cmake(Qt6Qml)
+BuildRequires:	cmake(Qt6QmlAssetDownloader)
 BuildRequires:	cmake(Qt6QmlModels)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6QuickControls2)
@@ -31,6 +32,8 @@ BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6GuiAddons)
 BuildRequires:	cmake(KF6GlobalAccel)
 BuildRequires:	cmake(KF6ColorScheme)
+BuildRequires:	cmake(KF6Crash)
+BuildRequires:	cmake(KF6IconThemes)
 Suggests:	%{name}-translations = %{EVRD}
 %rename %{name}-kde6
 %rename kf6-kirigami-addons
