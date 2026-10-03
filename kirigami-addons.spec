@@ -3,7 +3,7 @@
 
 Name:		kirigami-addons
 Version:	1.13.1
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 Summary:	Add-on widgets for the Kirigami library
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/libraries/kirigami-addons/-/archive/master/kirigami-addons-master.tar.bz2
